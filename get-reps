@@ -1,0 +1,20 @@
+#!/bin/bash
+
+declare -a repos=(
+repo
+skeleton
+core-repo
+pkgbuild
+iso
+bspwm
+calamares-config
+os.github.io
+scripts
+3party-repo
+sddm-theme
+grub-theme
+fonts
+dmenu
+)
+
+for i in ${repos[@]}; do (git clone https://github.com/stalker-os/stalker-${i}); done
