@@ -2,19 +2,13 @@
 
 declare -a repos=(
 repo
-skeleton
+3party-repo
 core-repo
 pkgbuild
 iso
-bspwm
 calamares-config
-os.github.io
-scripts
-3party-repo
-sddm-theme
-grub-theme
-fonts
-dmenu
+xfce
+wallpapers
 )
 
-for i in ${repos[@]}; do (git clone https://github.com/stalker-os/stalker-${i}); done
+for i in ${repos[@]}; do (git clone https://github.com/zone-os/zone-${i}); done
