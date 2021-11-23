@@ -11,4 +11,4 @@ xfce
 wallpapers
 )
 
-for i in ${repos[@]}; do (git clone https://github.com/zone-os/zone-${i}); done
+for i in ${repos[@]}; do (git clone https://github.com/zone-linux/zone-${i}); done
