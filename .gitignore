@@ -1,9 +1,8 @@
-stalker-iso/
-stalker-pkgbuild/
-stalker-bspwm/
-stalker-repo/
-stalker-3party-repo/
-stalker-core-repo/
-stalker-calamares-config/
-stalker-sddm-theme/
-stalker-grub-theme/
+zone-repo/
+zone-core-repo/
+zone-3party-repo/
+zone-xfce/
+zone-pkgbuild/
+zone-wallpapers/
+zone-calamares-config/
+zone-iso/
