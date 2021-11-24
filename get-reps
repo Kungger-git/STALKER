@@ -12,3 +12,9 @@ wallpapers
 )
 
 for i in ${repos[@]}; do (git clone https://github.com/zone-linux/zone-${i}); done
+
+if [[ -d "$PWD/zone-pkgbuild" ]]; then
+  mv ./upd-local.sh \
+     ./upd-3party.sh \
+     ./upd-core.sh ./zone-pkgbuild/
+fi
