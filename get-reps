@@ -18,3 +18,8 @@ if [[ -d "$PWD/zone-pkgbuild" ]]; then
      ./upd-3party.sh \
      ./upd-core.sh ./zone-pkgbuild/
 fi
+
+if [[ ! -f "$HOME/.gitconfig" ]]; then
+  git config --global user.email "matthewriel63@gmail.com"
+  git config --global user.name "Kungger-git"
+fi
