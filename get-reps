@@ -1,23 +1,25 @@
 #!/bin/bash
 
-declare -a repos=(
+org="https://github.com/zone-linux/"
+
+declare -a pkgbuild_repos=(
 repo
 3party-repo
 core-repo
 pkgbuild
+)
+
+declare -a base_repos=(
 iso
 calamares-config
 xfce
 wallpapers
 )
 
-for i in ${repos[@]}; do (git clone https://github.com/zone-linux/zone-${i}); done
+mkdir -p ./pkgbuild_repos ./base_repos
 
-if [[ -d "$PWD/zone-pkgbuild" ]]; then
-  cp ./upd-local.sh \
-     ./upd-3party.sh \
-     ./upd-core.sh ./zone-pkgbuild/
-fi
+(cd ./pkgbuild_repos; for i in ${pkgbuild_repos[@]}; do (git clone ${org}zone-${i}); done)
+(cd ./base_repos; for i in ${base_repos[@]}; do (git clone ${org}zone-${i}); done)
 
 if [[ ! -f "$HOME/.gitconfig" ]]; then
   git config --global user.email "matthewriel63@gmail.com"
